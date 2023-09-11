@@ -35,6 +35,7 @@ let createAnswer = async () => {
     peerConnection.ontrack = async (event) => {
         console.log("track added");
         event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
+        console.log(remoteStream);
         console.log("track done");
     }
 
